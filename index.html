@@ -55,7 +55,7 @@
       align-items: center;
       gap: 8px;
       font-weight: 800;
-      font-size: 17px;
+      font-size: 16px;
       letter-spacing: 1px;
       color: #ffffff;
       text-shadow: 0 0 10px rgba(0,210,255,0.6);
@@ -67,7 +67,7 @@
     .resource-container {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
     }
 
     .res-pill {
@@ -75,13 +75,13 @@
       align-items: center;
       gap: 6px;
       background: rgba(0, 0, 0, 0.4);
-      padding: 4px 10px;
+      padding: 4px 9px;
       border-radius: 6px;
       border: 1px solid #1e293b;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
     }
-    .res-pill .icon { font-size: 15px; }
+    .res-pill .icon { font-size: 14px; }
     .res-pill.oxygen { border-color: rgba(0,210,255,0.4); color: #7dd3fc; }
     .res-pill.power { border-color: rgba(255,193,7,0.4); color: #fde047; }
     .res-pill.food { border-color: rgba(74,222,128,0.4); color: #86efac; }
@@ -93,14 +93,14 @@
     .top-controls {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .cycle-badge {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       background: #1e293b;
-      padding: 4px 10px;
+      padding: 4px 8px;
       border-radius: 4px;
       border: 1px solid #334155;
       color: #94a3b8;
@@ -111,10 +111,10 @@
       background: #1e293b;
       border: 1px solid #334155;
       color: #e2e8f0;
-      padding: 5px 10px;
+      padding: 5px 9px;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: bold;
       transition: all 0.2s;
     }
@@ -127,6 +127,15 @@
       background: var(--accent-cyan);
       color: #0b0f19;
       border-color: var(--accent-cyan);
+    }
+    .btn-lang {
+      border-color: var(--accent-purple);
+      color: #e9d5ff;
+      background: rgba(147, 51, 234, 0.2);
+    }
+    .btn-lang:hover {
+      background: rgba(147, 51, 234, 0.4);
+      border-color: var(--accent-purple);
     }
 
     /* MAIN VIEWPORT */
@@ -254,7 +263,7 @@
       border: 1px solid #1e293b;
       border-radius: 8px;
       cursor: pointer;
-      min-width: 72px;
+      min-width: 76px;
       transition: all 0.15s;
     }
     .build-card:hover {
@@ -273,8 +282,8 @@
       cursor: not-allowed;
     }
     .build-card .card-icon { font-size: 20px; }
-    .build-card .card-title { font-size: 11px; font-weight: 700; color: #f1f5f9; text-align: center; }
-    .build-card .card-cost { font-size: 10px; color: #94a3b8; }
+    .build-card .card-title { font-size: 11px; font-weight: 700; color: #f1f5f9; text-align: center; white-space: nowrap; }
+    .build-card .card-cost { font-size: 10px; color: #94a3b8; white-space: nowrap; }
 
     /* LEFT COLONISTS LIST */
     #colonists-panel {
@@ -308,11 +317,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .c-name { font-size: 13px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 5px; }
     .c-status { font-size: 11px; color: var(--accent-cyan); background: rgba(0,210,255,0.1); padding: 2px 6px; border-radius: 4px; }
     .c-status.danger { color: var(--accent-red); background: rgba(255,51,102,0.15); animation: blink 1s infinite alternate; }
+
+    .c-subinfo {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
 
     @keyframes blink { from { opacity: 0.6; } to { opacity: 1; } }
 
@@ -329,7 +346,7 @@
       font-weight: 600;
       color: #94a3b8;
     }
-    .bar-row span { width: 38px; }
+    .bar-row span { width: 44px; }
     .bar-track {
       flex: 1;
       height: 5px;
@@ -385,9 +402,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 780px;
+      width: 820px;
       max-width: 95vw;
-      height: 560px;
+      height: 580px;
       max-height: 90vh;
       background: rgba(13, 20, 36, 0.98);
       border: 2px solid var(--panel-border);
@@ -490,7 +507,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 600px;
+      width: 620px;
       max-width: 95vw;
       background: rgba(13, 20, 36, 0.98);
       border: 2px solid var(--panel-border);
@@ -502,23 +519,6 @@
     #help-modal h2 { margin-bottom: 16px; color: var(--accent-cyan); }
     #help-modal p, #help-modal li { font-size: 13px; color: #cbd5e1; line-height: 1.6; margin-bottom: 8px; }
     #help-modal ul { margin-left: 20px; }
-
-    /* TOOLTIP */
-    #info-tooltip {
-      position: absolute;
-      display: none;
-      background: rgba(15, 23, 42, 0.96);
-      border: 1px solid var(--accent-cyan);
-      border-radius: 6px;
-      padding: 8px 12px;
-      font-size: 11px;
-      color: #fff;
-      pointer-events: none;
-      z-index: 150;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-      max-width: 220px;
-      line-height: 1.4;
-    }
   </style>
 </head>
 <body>
@@ -526,36 +526,36 @@
   <!-- TOP HUD BAR -->
   <header id="top-bar">
     <div class="brand-title">
-      <span>❄ FROSTFALL:</span> ASTEROID OUTPOST
+      <span id="txt-title-prefix">❄ FROSTFALL:</span> <span id="txt-title-sub">소행성 기지 개척단</span>
     </div>
 
     <!-- RESOURCES -->
     <div class="resource-container">
-      <div class="res-pill oxygen" title="기지 총 산소 분압 및 호흡 가능 구역">
+      <div class="res-pill oxygen" id="pill-o2">
         <span class="icon">💨</span>
         <span id="stat-o2">92%</span>
       </div>
-      <div class="res-pill power" title="전력망 발전량 / 부하 / 축전량">
+      <div class="res-pill power" id="pill-power">
         <span class="icon">⚡</span>
         <span id="stat-power">400W / 0J</span>
       </div>
-      <div class="res-pill food" title="보유 식량 칼로리">
+      <div class="res-pill food" id="pill-food">
         <span class="icon">🍞</span>
         <span id="stat-food">3,600 kcal</span>
       </div>
-      <div class="res-pill metal" title="정제 금속 원석">
+      <div class="res-pill metal" id="pill-metal">
         <span class="icon">⚙</span>
         <span id="stat-metal">85</span>
       </div>
-      <div class="res-pill ice" title="빙하 얼음/물 자원">
+      <div class="res-pill ice" id="pill-ice">
         <span class="icon">🧊</span>
         <span id="stat-ice">120</span>
       </div>
-      <div class="res-pill coal" title="석탄 연료">
+      <div class="res-pill coal" id="pill-coal">
         <span class="icon">⬛</span>
         <span id="stat-coal">60</span>
       </div>
-      <div class="res-pill science" title="연구 데이터 포인트">
+      <div class="res-pill science" id="pill-science">
         <span class="icon">🧪</span>
         <span id="stat-rp">0 RP</span>
       </div>
@@ -563,15 +563,16 @@
 
     <!-- CONTROLS & TIME -->
     <div class="top-controls">
-      <div class="cycle-badge">CYCLE <strong id="lbl-cycle">1</strong> <span id="lbl-time" style="font-size:11px; color:#64748b;">(08:00)</span></div>
-      <button class="btn-icon" id="btn-pause" title="일시정지 [스페이스바]">⏸</button>
-      <button class="btn-icon active" id="btn-speed-1" title="1배속">1x</button>
-      <button class="btn-icon" id="btn-speed-2" title="2배속">2x</button>
-      <button class="btn-icon" id="btn-speed-3" title="3배속">3x</button>
-      <button class="btn-icon" id="btn-tech" title="연구 테크트리 열기">🧪 테크트리</button>
-      <button class="btn-icon" id="btn-sound" title="오디오 토글">🔊</button>
-      <button class="btn-icon" id="btn-save" title="저장">💾</button>
-      <button class="btn-icon" id="btn-help" title="조작 및 생존 가이드">❓</button>
+      <div class="cycle-badge"><span id="lbl-cycle-prefix">CYCLE</span> <strong id="lbl-cycle">1</strong> <span id="lbl-time" style="font-size:11px; color:#64748b;">(08:00)</span></div>
+      <button class="btn-icon" id="btn-pause">⏸</button>
+      <button class="btn-icon active" id="btn-speed-1">1x</button>
+      <button class="btn-icon" id="btn-speed-2">2x</button>
+      <button class="btn-icon" id="btn-speed-3">3x</button>
+      <button class="btn-icon" id="btn-tech">🧪 <span id="lbl-btn-tech">테크트리</span></button>
+      <button class="btn-icon" id="btn-sound">🔊</button>
+      <button class="btn-icon btn-lang" id="btn-lang" title="언어 변경 / Switch Language">🌐 한국어</button>
+      <button class="btn-icon" id="btn-save">💾</button>
+      <button class="btn-icon" id="btn-help">❓</button>
     </div>
   </header>
 
@@ -581,10 +582,10 @@
 
     <!-- OVERLAYS BAR -->
     <div class="overlay-bar">
-      <button class="overlay-btn active" data-overlay="normal">🌍 일반 (F1)</button>
-      <button class="overlay-btn" data-overlay="gas">💨 대기/기체 (F2)</button>
-      <button class="overlay-btn" data-overlay="power">⚡ 전력망 (F3)</button>
-      <button class="overlay-btn" data-overlay="temp">🌡 온도/한파 (F4)</button>
+      <button class="overlay-btn active" data-overlay="normal" id="ov-normal">🌍 일반 (F1)</button>
+      <button class="overlay-btn" data-overlay="gas" id="ov-gas">💨 대기/기체 (F2)</button>
+      <button class="overlay-btn" data-overlay="power" id="ov-power">⚡ 전력망 (F3)</button>
+      <button class="overlay-btn" data-overlay="temp" id="ov-temp">🌡 온도/한파 (F4)</button>
     </div>
 
     <!-- LEFT COLONISTS LIST -->
@@ -596,24 +597,21 @@
     <!-- BOTTOM BUILD DOCK -->
     <div id="build-dock">
       <div class="category-tabs">
-        <button class="cat-btn active" data-cat="order">⛏ 명령/굴착</button>
-        <button class="cat-btn" data-cat="base">🧱 기본 구조</button>
-        <button class="cat-btn" data-cat="power">⚡ 전력/배선</button>
-        <button class="cat-btn" data-cat="oxygen">💨 대기/생명유지</button>
-        <button class="cat-btn" data-cat="food">🌱 식량/주거</button>
-        <button class="cat-btn" data-cat="science">🔬 과학/연구</button>
+        <button class="cat-btn active" data-cat="order" id="cat-order">⛏ 명령/굴착</button>
+        <button class="cat-btn" data-cat="base" id="cat-base">🧱 기본 구조</button>
+        <button class="cat-btn" data-cat="power" id="cat-power">⚡ 전력/배선</button>
+        <button class="cat-btn" data-cat="oxygen" id="cat-oxygen">💨 대기/생명유지</button>
+        <button class="cat-btn" data-cat="food" id="cat-food">🌱 식량/주거</button>
+        <button class="cat-btn" data-cat="science" id="cat-science">🔬 과학/연구</button>
       </div>
       <div class="items-shelf" id="build-shelf"></div>
     </div>
-
-    <!-- TOOLTIP -->
-    <div id="info-tooltip"></div>
   </main>
 
   <!-- TECH MODAL -->
   <div id="tech-modal">
     <div class="modal-header">
-      <h2>🧪 연구 테크트리 (RESEARCH ARCHIVE)</h2>
+      <h2 id="modal-tech-title">🧪 연구 테크트리 (RESEARCH ARCHIVE)</h2>
       <button class="close-btn" id="btn-close-tech">&times;</button>
     </div>
     <div class="tech-grid-container" id="tech-grid"></div>
@@ -621,15 +619,15 @@
 
   <!-- HELP MODAL -->
   <div id="help-modal">
-    <h2>❄ FrostFall 생존 매뉴얼</h2>
-    <p><strong>배경:</strong> 영하 35℃의 얼어붙은 소행성 지하에 불시착했습니다. 지반을 굴착하고 산소와 전력을 공급해 개척단을 살려내야 합니다.</p>
+    <h2 id="help-title">❄ FrostFall 생존 매뉴얼</h2>
+    <p id="help-intro"><strong>배경:</strong> 영하 35℃의 얼어붙은 소행성 지하에 불시착했습니다. 지반을 굴착하고 산소와 전력을 공급해 개척단을 살려내야 합니다.</p>
     <ul>
-      <li><strong>화면 조작:</strong> 마우스 드래그(우클릭/휠클릭) 또는 WASD/화살표 키로 카메라 이동, 휠 스크롤로 줌 인/아웃.</li>
-      <li><strong>굴착:</strong> 하단 [명령/굴착] → [⛏ 타일 굴착] 선택 후 맵을 드래그하면 개척민이 흙, 얼음, 광석을 파냅니다.</li>
-      <li><strong>산소 유지:</strong> 굴착한 공간은 진공이거나 이산화탄소가 차오릅니다. [산소 확산기]를 건설해 산소를 방출하고, 무거운 CO2는 [이산화탄소 스크러버]로 흡수하세요.</li>
-      <li><strong>전력망:</strong> [수동 쳇바퀴 발전기]와 [배터리]를 건설하고 [전선]으로 기계와 연결하세요.</li>
-      <li><strong>거주민 관리:</strong> 산소(호흡), 칼로리(허기), 피로(수면), 스트레스를 수시로 확인하세요. 침대와 난방기를 제공하지 않으면 동상이나 공황에 빠집니다!</li>
-      <li><strong>F1~F4 키:</strong> 대기 밀도, 전선망, 온도 분포 오버레이를 즉시 전환할 수 있습니다.</li>
+      <li id="help-li-1"><strong>화면 조작:</strong> 마우스 드래그(우클릭/휠클릭) 또는 WASD/화살표 키로 카메라 이동, 휠 스크롤로 줌 인/아웃.</li>
+      <li id="help-li-2"><strong>굴착:</strong> 하단 [명령/굴착] → [⛏ 타일 굴착] 선택 후 맵을 드래그하면 개척민이 흙, 얼음, 광석을 파냅니다.</li>
+      <li id="help-li-3"><strong>산소 유지:</strong> 굴착한 공간은 진공이거나 이산화탄소가 차오릅니다. [산소 확산기]를 건설해 산소를 방출하고, 무거운 CO2는 [이산화탄소 스크러버]로 흡수하세요.</li>
+      <li id="help-li-4"><strong>전력망:</strong> [수동 쳇바퀴 발전기]와 [배터리]를 건설하고 [전선]으로 기계와 연결하세요.</li>
+      <li id="help-li-5"><strong>거주민 관리:</strong> 산소(호흡), 칼로리(허기), 피로(수면), 스트레스를 수시로 확인하세요. 침대와 난방기를 제공하지 않으면 동상이나 공황에 빠집니다!</li>
+      <li id="help-li-6"><strong>F1~F4 키:</strong> 대기 밀도, 전선망, 온도 분포 오버레이를 즉시 전환할 수 있습니다.</li>
     </ul>
     <div style="text-align: right; margin-top: 15px;">
       <button class="btn-icon" id="btn-close-help" style="padding: 8px 18px; font-size: 14px;">확인 완료</button>
@@ -643,6 +641,256 @@
      * High-depth 2D Cross-Section Colony Survival Simulator
      * Pure Vanilla JS + HTML5 Canvas + Web Audio API
      */
+
+    // --- MULTI-LANGUAGE (i18n) DICTIONARY ---
+    const I18N = {
+      ko: {
+        langName: '🌐 한국어',
+        titlePrefix: '❄ FROSTFALL:',
+        titleSub: '소행성 기지 개척단',
+        statO2Title: '기지 총 산소 분압 및 호흡 가능 구역',
+        statPowerTitle: '전력망 발전량 / 부하 / 축전량',
+        statFoodTitle: '보유 식량 칼로리',
+        statMetalTitle: '정제 금속 원석',
+        statIceTitle: '빙하 얼음/물 자원',
+        statCoalTitle: '석탄 연료',
+        statScienceTitle: '연구 데이터 포인트',
+        cycleLabel: '사이클',
+        pauseTitle: '일시정지 [스페이스바]',
+        speed1Title: '1배속',
+        speed2Title: '2배속',
+        speed3Title: '3배속',
+        techBtn: '테크트리',
+        techTitle: '연구 테크트리 열기',
+        soundTitle: '오디오 켜기/끄기',
+        saveBtn: '저장',
+        saveTitle: '게임 진행상황 저장',
+        helpBtn: '가이드',
+        helpTitle: '조작 및 생존 매뉴얼',
+        langBtnTitle: '언어 변경 / Switch Language',
+        overlayNormal: '🌍 일반 (F1)',
+        overlayGas: '💨 대기/기체 (F2)',
+        overlayPower: '⚡ 전력망 (F3)',
+        overlayTemp: '🌡 온도/한파 (F4)',
+        catOrder: '⛏ 명령/굴착',
+        catBase: '🧱 기본 구조',
+        catPower: '⚡ 전력/배선',
+        catOxygen: '💨 대기/생명유지',
+        catFood: '🌱 식량/주거',
+        catScience: '🔬 과학/연구',
+        toolDig: '타일 굴착',
+        toolDigCost: '드래그 영역',
+        toolCancel: '명령 취소',
+        toolCancelCost: '작업 해제',
+        tileFloor: '구조 타일',
+        tileLadder: '사다리',
+        tileInsulated: '단열 타일',
+        costMetal: '금속',
+        costIce: '얼음',
+        costCoal: '석탄',
+        costReqTech: '🔒 연구 필요',
+        statO2: '산소',
+        statCalories: '칼로리',
+        statEnergy: '기력',
+        statStress: '스트레스',
+        statusSuffocating: '🚨 질식 위험!',
+        statusMining: '⛏ 굴착 작업 중',
+        statusBuilding: '🧱 건설 작업 중',
+        statusOperating: '⚡ 발전기 가동',
+        statusSleeping: '💤 수면 중',
+        statusResearching: '🔬 데이터 분석',
+        statusIdle: '대기 중',
+        techModalTitle: '🧪 연구 테크트리 (RESEARCH ARCHIVE)',
+        techResearched: '✔ 연구 완료',
+        techCanUnlock: '클릭하여 즉시 해금',
+        techNeedRP: '🔒 RP 부족',
+        helpTitleText: '❄ FrostFall 생존 매뉴얼',
+        helpIntro: '배경: 영하 35℃의 얼어붙은 소행성 지하에 불시착했습니다. 지반을 굴착하고 산소와 전력을 공급해 개척단을 살려내야 합니다.',
+        help1: '화면 조작: 마우스 드래그(우클릭/휠클릭) 또는 WASD/화살표 키로 카메라 이동, 휠 스크롤로 줌 인/아웃.',
+        help2: '굴착: 하단 [명령/굴착] → [⛏ 타일 굴착] 선택 후 맵을 드래그하면 개척민이 흙, 얼음, 광석을 파냅니다.',
+        help3: '산소 유지: 굴착한 공간은 진공이거나 이산화탄소가 차오릅니다. [산소 확산기]를 건설해 산소를 방출하고, 무거운 CO2는 [이산화탄소 스크러버]로 흡수하세요.',
+        help4: '전력망: [수동 쳇바퀴 발전기]와 [배터리]를 건설하고 [전선]으로 기계와 연결하세요.',
+        help5: '거주민 관리: 산소(호흡), 칼로리(허기), 피로(수면), 스트레스를 수시로 확인하세요. 침대와 난방기를 제공하지 않으면 동상이나 공황에 빠집니다!',
+        help6: 'F1~F4 키: 대기 밀도, 전선망, 온도 분포 오버레이를 즉시 전환할 수 있습니다.',
+        helpClose: '확인 완료',
+        toastSave: '💾 게임 상태가 로컬 브라우저에 저장되었습니다.',
+        toastNewCycle: '🌅 새 사이클 시작: CYCLE {cycle}',
+        toastHarvest: '🌾 서리밀 수확 완료 (+350 kcal)',
+        toastCrisisEnd: '✅ 위기 상황 종료: [{name}]이(가) 해소되었습니다.',
+        toastCrisisAlert: '🚨 [돌발 위기] {name}: {desc}',
+        toastTechUnlocked: '✨ 연구 해금 완료: [{name}]',
+        toastSuffocationAlert: '🚨 {name} 산소 부족으로 질식 위험!',
+        animGasp: '⚠ 질식!',
+        animSleep: '쿨쿨...',
+        colonistRoles: {
+          'Dr. Alex Vance': { role: '수석 과학자', trait: '명석한 두뇌' },
+          'Elena Rostova': { role: '수석 엔지니어', trait: '기계 조작 달인' },
+          'Marcus Briggs': { role: '베테랑 광부', trait: '무쇠 체력' },
+          'Dr. Hana Park': { role: '생태 식물학자', trait: '초록빛 손길' }
+        },
+        buildings: {
+          manual_gen: { name: '수동 쳇바퀴 발전기', desc: '거주민이 직접 뛰어 400W 전력을 생산합니다.' },
+          coal_gen: { name: '석탄 화력 발전기', desc: '석탄을 연소하여 지속적인 600W 전력을 공급하며 CO2를 배출합니다.' },
+          battery: { name: '소형 배터리 뱅크', desc: '잉여 전력을 최대 10,000J 저장합니다.' },
+          wire: { name: '송전 전선', desc: '발전기와 소비 시설을 연결하는 전력 배선입니다.' },
+          o2_diffuser: { name: '산소 확산기', desc: '전력과 얼음을 소모해 호흡 가능한 고순도 산소를 분사합니다.' },
+          co2_scrubber: { name: 'CO2 스크러버', desc: '바닥으로 가라앉는 이산화탄소를 흡수 여과합니다.' },
+          space_heater: { name: '공간 열선 난방기', desc: '극저온 소행성 한파를 막아 주변 온도를 따뜻하게 유지합니다.' },
+          cot: { name: '간이 침대', desc: '지친 개척민이 편안히 수면을 취하고 스트레스를 해소합니다.' },
+          masher: { name: '조류 식량 배양기', desc: '얼음과 미생물을 배양해 식량 바(칼로리)를 합성합니다.' },
+          planter: { name: '서리밀 수경재배기', desc: '저온에서도 자라는 서리밀을 재배하여 지속적으로 수확합니다.' },
+          research_station: { name: '기초 연구대', desc: '개척민 과학 연구를 수행하여 새로운 첨단 기술을 해금합니다.' }
+        },
+        techs: {
+          mining_adv: { name: '고강도 다이아몬드 곡괭이', desc: '굴착 속도가 50% 향상됩니다.' },
+          reinforced_ladder: { name: '경량 알루미늄 사다리', desc: '사다리 이동 속도가 30% 증가합니다.' },
+          comfortable_cot: { name: '기후 차단형 침대', desc: '수면 시 피로와 스트레스 회복률 40% 증가.' },
+          efficient_dynamo: { name: '베어링 최적화 발전기', desc: '수동 쳇바퀴 발전량 +100W 증가 (500W).' },
+          battery_mk2: { name: '고밀도 축전지 셀', desc: '배터리 용량이 25,000J로 2.5배 확장됩니다.' },
+          farming: { name: '서리밀 수경재배 농업', desc: '지속 가능한 농업 식량 재배기 건설 해금.' },
+          adv_thermal: { name: '지하 지열 히트파이프', desc: '난방기 전력 소모 25% 절감 및 열 보존율 증가.' },
+          o2_recycler: { name: '산소 기류 확산 촉진', desc: '산소 확산기의 산소 방출 반경과 분압 40% 증가.' },
+          coal_power: { name: '화력 석탄 발전 설비', desc: '연속 대용량 발전을 위한 석탄 화력 발전기 해금.' },
+          adv_scrub: { name: '화학 촉매 CO2 스크러버', desc: '하층 이산화탄소 대용량 자동 정화 시설 해금.' },
+          hydroponics: { name: '영양 농축 칼로리 가공', desc: '식량 배양기 칼로리 생산량 +50% 증가.' },
+          insulated_tiles: { name: '에어로젤 단열 블록', desc: '외부 소행성 혹한을 완벽 차단하는 초단열재 해금.' },
+          auto_vent: { name: '기압식 자동 조절 환기구', desc: '밀폐 기지 내부의 기체 순환 속도가 대폭 증가.' },
+          grid_transformer: { name: '스마트 전력 제어기', desc: '전력 과부하 스파크 위험을 100% 방지하고 손실 감소.' },
+          medical_stasis: { name: '생체 활력 제세동실', desc: '저산소 질식 및 극저온 동상에 대한 저항력 50% 증가.' }
+        },
+        crises: {
+          cold_snap: { name: '소행성 극저온 한파', desc: '소행성 심부에서 극저온 냉기가 몰아쳐 전 기지 기온이 -20℃ 급감합니다!' },
+          gas_leak: { name: '지하 고압 CO2 가스포켓 분출', desc: '균열에서 대량의 무거운 이산화탄소가 기지 하부로 유입됩니다!' },
+          blackout: { name: '발전 설비 합선 과부하', desc: '전력망에 순간 과부하가 발생하여 배터리 충전량이 방전되었습니다!' }
+        }
+      },
+      en: {
+        langName: '🌐 English',
+        titlePrefix: '❄ FROSTFALL:',
+        titleSub: 'ASTEROID OUTPOST',
+        statO2Title: 'Base Oxygen Pressure & Breathable Zones',
+        statPowerTitle: 'Power Grid Generation / Load / Stored Joules',
+        statFoodTitle: 'Stored Food Calories',
+        statMetalTitle: 'Refined Metal Ore',
+        statIceTitle: 'Glacial Ice / Water Resources',
+        statCoalTitle: 'Coal Fuel Supply',
+        statScienceTitle: 'Science Research Points (RP)',
+        cycleLabel: 'CYCLE',
+        pauseTitle: 'Pause [Space]',
+        speed1Title: '1x Speed',
+        speed2Title: '2x Speed',
+        speed3Title: '3x Speed',
+        techBtn: 'Tech Tree',
+        techTitle: 'Open Research Archive',
+        soundTitle: 'Toggle Audio',
+        saveBtn: 'Save',
+        saveTitle: 'Save Game State',
+        helpBtn: 'Guide',
+        helpTitle: 'Survival Manual & Controls',
+        langBtnTitle: 'Switch Language / 언어 변경',
+        overlayNormal: '🌍 Normal (F1)',
+        overlayGas: '💨 Atmosphere (F2)',
+        overlayPower: '⚡ Power Grid (F3)',
+        overlayTemp: '🌡 Thermal (F4)',
+        catOrder: '⛏ Orders/Dig',
+        catBase: '🧱 Base/Tiles',
+        catPower: '⚡ Power/Wires',
+        catOxygen: '💨 Oxygen/Life',
+        catFood: '🌱 Food/Living',
+        catScience: '🔬 Science/Tech',
+        toolDig: 'Dig Tile',
+        toolDigCost: 'Drag Area',
+        toolCancel: 'Cancel Order',
+        toolCancelCost: 'Clear Tasks',
+        tileFloor: 'Floor Tile',
+        tileLadder: 'Ladder',
+        tileInsulated: 'Insulated Wall',
+        costMetal: 'Metal',
+        costIce: 'Ice',
+        costCoal: 'Coal',
+        costReqTech: '🔒 Tech Required',
+        statO2: 'Oxygen',
+        statCalories: 'Calories',
+        statEnergy: 'Energy',
+        statStress: 'Stress',
+        statusSuffocating: '🚨 Suffocating!',
+        statusMining: '⛏ Mining...',
+        statusBuilding: '🧱 Building...',
+        statusOperating: '⚡ Operating Dynamo...',
+        statusSleeping: '💤 Sleeping...',
+        statusResearching: '🔬 Analyzing Data...',
+        statusIdle: 'Idle',
+        techModalTitle: '🧪 RESEARCH ARCHIVE (TECH TREE)',
+        techResearched: '✔ Researched',
+        techCanUnlock: 'Click to Unlock',
+        techNeedRP: '🔒 Insufficient RP',
+        helpTitleText: '❄ FrostFall Survival Manual',
+        helpIntro: 'Background: Crash-landed on Asteroid Zeta-9 at -35°C. Excavate living space, pump oxygen, generate electricity, and keep your crew alive.',
+        help1: 'Camera: Mouse Drag (Right/Middle Click) or WASD/Arrow keys to pan. Mouse Wheel to zoom in/out.',
+        help2: 'Mining: Select [Orders/Dig] → [⛏ Dig Tile] and drag over tiles to order colonists to excavate rock, ice, and ores.',
+        help3: 'Oxygen: Excavated caves begin as vacuum or fill with CO2. Build [Oxygen Diffuser] to emit O2 and [CO2 Scrubber] in lower pits.',
+        help4: 'Power Grid: Build [Manual Wheel] and [Battery], then connect machinery via [Power Wire].',
+        help5: 'Colonist Needs: Monitor Oxygen, Calories, Energy, and Stress. Cold environments and darkness will trigger distress breakdowns.',
+        help6: 'Hotkeys: F1 (Normal), F2 (Gases), F3 (Power), F4 (Thermal). Space pauses simulation.',
+        helpClose: 'Got it',
+        toastSave: '💾 Game progress saved to browser LocalStorage.',
+        toastNewCycle: '🌅 New Cycle Started: CYCLE {cycle}',
+        toastHarvest: '🌾 Frost Wheat Harvested (+350 kcal)',
+        toastCrisisEnd: '✅ Crisis Resolved: [{name}] has ended.',
+        toastCrisisAlert: '🚨 [Crisis Alert] {name}: {desc}',
+        toastTechUnlocked: '✨ Tech Unlocked: [{name}]',
+        toastSuffocationAlert: '🚨 {name} is suffocating in low oxygen!',
+        animGasp: '⚠ GASP!',
+        animSleep: 'Zzz...',
+        colonistRoles: {
+          'Dr. Alex Vance': { role: 'Chief Scientist', trait: 'Brilliant Mind' },
+          'Elena Rostova': { role: 'Chief Engineer', trait: 'Master Tinkerer' },
+          'Marcus Briggs': { role: 'Veteran Miner', trait: 'Iron Stamina' },
+          'Dr. Hana Park': { role: 'Ecological Botanist', trait: 'Green Thumb' }
+        },
+        buildings: {
+          manual_gen: { name: 'Manual Dynamo', desc: 'Colonist runs on the wheel to generate 400W of electrical power.' },
+          coal_gen: { name: 'Coal Power Plant', desc: 'Burns coal to provide steady 600W electricity, emitting CO2 and heat.' },
+          battery: { name: 'Battery Bank', desc: 'Stores up to 10,000 Joules of excess electrical energy.' },
+          wire: { name: 'Power Wire', desc: 'Conductive cabling connecting generators to consumers.' },
+          o2_diffuser: { name: 'Oxygen Diffuser', desc: 'Consumes ice and power to emit pure breathable oxygen.' },
+          co2_scrubber: { name: 'CO2 Scrubber', desc: 'Filters heavy carbon dioxide sinking to the lower colony trenches.' },
+          space_heater: { name: 'Space Heater', desc: 'Radiates thermal warmth to prevent subzero hypothermia.' },
+          cot: { name: 'Bed Cot', desc: 'Comfortable sleeping cot recovering colonist stamina and stress.' },
+          masher: { name: 'Microbe Masher', desc: 'Synthesizes nutrient calorie ration bars from ice and algae.' },
+          planter: { name: 'Hydroponic Planter', desc: 'Grows Frost Wheat crops at low temperatures for food.' },
+          research_station: { name: 'Research Station', desc: 'Scientist conducts analysis to unlock advanced colony technologies.' }
+        },
+        techs: {
+          mining_adv: { name: 'Diamond Tipped Pickaxes', desc: 'Mining excavation speed increased by 50%.' },
+          reinforced_ladder: { name: 'Aluminum Ladders', desc: 'Ladder climbing movement speed increased by 30%.' },
+          comfortable_cot: { name: 'Insulated Bedding', desc: 'Sleep stamina and stress recovery improved by 40%.' },
+          efficient_dynamo: { name: 'Low-Friction Bearings', desc: 'Manual generator output increased by +100W (500W total).' },
+          battery_mk2: { name: 'Dense Battery Cells', desc: 'Battery capacity expanded 2.5x to 25,000 Joules.' },
+          farming: { name: 'Frost Wheat Agriculture', desc: 'Unlocks sustainable crop planter box construction.' },
+          adv_thermal: { name: 'Geothermal Heat Pipes', desc: 'Heater power usage reduced by 25% with wider radiation.' },
+          o2_recycler: { name: 'Forced Oxygen Flow', desc: 'Oxygen diffuser emission rate and radius increased by 40%.' },
+          coal_power: { name: 'Thermal Coal Power', desc: 'Unlocks high-capacity coal generators for large grids.' },
+          adv_scrub: { name: 'Catalytic CO2 Scrubbers', desc: 'Unlocks heavy-duty automatic carbon dioxide scrubbers.' },
+          hydroponics: { name: 'Nutrient Fortification', desc: 'Food synthesizer calorie yield increased by +50%.' },
+          insulated_tiles: { name: 'Aerogel Thermal Tiles', desc: 'Super-insulating tiles blocking subzero asteroid cold.' },
+          auto_vent: { name: 'Barometric Air Vents', desc: 'Internal atmospheric gas circulation speed doubled.' },
+          grid_transformer: { name: 'Smart Power Transformer', desc: 'Eliminates grid overload spark hazard completely.' },
+          medical_stasis: { name: 'Medical Stasis Pod', desc: 'Colonist resistance to hypoxia and hypothermia boosted by 50%.' }
+        },
+        crises: {
+          cold_snap: { name: 'Asteroid Deep Freeze', desc: 'Subzero cold snap sweeps in, dropping temperatures by 20°C!' },
+          gas_leak: { name: 'High-Pressure CO2 Rupture', desc: 'A buried high-pressure pocket ruptures, flooding lower decks with CO2!' },
+          blackout: { name: 'Grid Short-Circuit', desc: 'Electrical power surge causes an emergency battery discharge!' }
+        }
+      }
+    };
+
+    // Current Active Language ('ko' by default)
+    let curLang = localStorage.getItem('frostfall_lang') || 'ko';
+    function t(key) {
+      return I18N[curLang]?.[key] || I18N['ko']?.[key] || key;
+    }
 
     // --- SOUND SYNTHESIS ENGINE (Web Audio API) ---
     class SoundEngine {
@@ -763,79 +1011,68 @@
     // Building Types Definitions
     const BUILDINGS_DEF = {
       manual_gen: {
-        id: 'manual_gen', name: '수동 쳇바퀴 발전기', cat: 'power', w: 2, h: 2,
-        cost: { metal: 20 }, power: 400, isGen: true, requiresOp: true,
-        desc: '거주민이 직접 뛰어 400W 전력을 생산합니다.'
+        id: 'manual_gen', cat: 'power', w: 2, h: 2,
+        cost: { metal: 20 }, power: 400, isGen: true, requiresOp: true
       },
       coal_gen: {
-        id: 'coal_gen', name: '석탄 화력 발전기', cat: 'power', w: 2, h: 3,
-        cost: { metal: 50 }, power: 600, isGen: true, fuel: 'coal', tech: 'coal_power',
-        desc: '석탄을 연소하여 지속적인 600W 전력을 공급하며 CO2를 배출합니다.'
+        id: 'coal_gen', cat: 'power', w: 2, h: 3,
+        cost: { metal: 50 }, power: 600, isGen: true, fuel: 'coal', tech: 'coal_power'
       },
       battery: {
-        id: 'battery', name: '소형 배터리 뱅크', cat: 'power', w: 1, h: 2,
-        cost: { metal: 15 }, capacity: 10000,
-        desc: '잉여 전력을 최대 10,000J 저장합니다.'
+        id: 'battery', cat: 'power', w: 1, h: 2,
+        cost: { metal: 15 }, capacity: 10000
       },
       wire: {
-        id: 'wire', name: '송전 전선', cat: 'power', w: 1, h: 1,
-        cost: { metal: 2 }, isWire: true,
-        desc: '발전기와 소비 시설을 연결하는 전력 배선입니다.'
+        id: 'wire', cat: 'power', w: 1, h: 1,
+        cost: { metal: 2 }, isWire: true
       },
       o2_diffuser: {
-        id: 'o2_diffuser', name: '산소 확산기', cat: 'oxygen', w: 1, h: 2,
-        cost: { metal: 25, ice: 10 }, powerUse: 120, producesGas: GAS_O2,
-        desc: '전력과 얼음을 소모해 호흡 가능한 고순도 산소를 분사합니다.'
+        id: 'o2_diffuser', cat: 'oxygen', w: 1, h: 2,
+        cost: { metal: 25, ice: 10 }, powerUse: 120, producesGas: GAS_O2
       },
       co2_scrubber: {
-        id: 'co2_scrubber', name: 'CO2 스크러버', cat: 'oxygen', w: 2, h: 2,
-        cost: { metal: 35 }, powerUse: 80, tech: 'adv_scrub',
-        desc: '바닥으로 가라앉는 이산화탄소를 흡수 여과합니다.'
+        id: 'co2_scrubber', cat: 'oxygen', w: 2, h: 2,
+        cost: { metal: 35 }, powerUse: 80, tech: 'adv_scrub'
       },
       space_heater: {
-        id: 'space_heater', name: '공간 열선 난방기', cat: 'oxygen', w: 1, h: 1,
-        cost: { metal: 15 }, powerUse: 100, heat: 25,
-        desc: '극저온 소행성 한파를 막아 주변 온도를 따뜻하게 유지합니다.'
+        id: 'space_heater', cat: 'oxygen', w: 1, h: 1,
+        cost: { metal: 15 }, powerUse: 100, heat: 25
       },
       cot: {
-        id: 'cot', name: '간이 침대', cat: 'food', w: 2, h: 1,
-        cost: { metal: 10 }, isBed: true,
-        desc: '지친 개척민이 편안히 수면을 취하고 스트레스를 해소합니다.'
+        id: 'cot', cat: 'food', w: 2, h: 1,
+        cost: { metal: 10 }, isBed: true
       },
       masher: {
-        id: 'masher', name: '조류 식량 배양기', cat: 'food', w: 2, h: 2,
-        cost: { metal: 30, ice: 15 }, powerUse: 70, requiresOp: true,
-        desc: '얼음과 미생물을 배양해 식량 바(칼로리)를 합성합니다.'
+        id: 'masher', cat: 'food', w: 2, h: 2,
+        cost: { metal: 30, ice: 15 }, powerUse: 70, requiresOp: true
       },
       planter: {
-        id: 'planter', name: '서리밀 수경재배기', cat: 'food', w: 1, h: 1,
-        cost: { metal: 10 }, tech: 'farming',
-        desc: '저온에서도 자라는 서리밀을 재배하여 지속적으로 수확합니다.'
+        id: 'planter', cat: 'food', w: 1, h: 1,
+        cost: { metal: 10 }, tech: 'farming'
       },
       research_station: {
-        id: 'research_station', name: '기초 연구대', cat: 'science', w: 2, h: 2,
-        cost: { metal: 25 }, powerUse: 60, requiresOp: true, isResearch: true,
-        desc: '개척민 과학 연구를 수행하여 새로운 첨단 기술을 해금합니다.'
+        id: 'research_station', cat: 'science', w: 2, h: 2,
+        cost: { metal: 25 }, powerUse: 60, requiresOp: true, isResearch: true
       }
     };
 
     // Tech Tree (15 Nodes)
     const TECH_TREE = [
-      { id: 'mining_adv', name: '고강도 다이아몬드 곡괭이', tier: 1, cost: 25, researched: false, req: [], desc: '굴착 속도가 50% 향상됩니다.' },
-      { id: 'reinforced_ladder', name: '경량 알루미늄 사다리', tier: 1, cost: 25, researched: false, req: [], desc: '사다리 이동 속도가 30% 증가합니다.' },
-      { id: 'comfortable_cot', name: '기후 차단형 침대', tier: 1, cost: 30, researched: false, req: [], desc: '수면 시 피로와 스트레스 회복률 40% 증가.' },
-      { id: 'efficient_dynamo', name: '베어링 최적화 발전기', tier: 1, cost: 35, researched: false, req: [], desc: '수동 쳇바퀴 발전량 +100W 증가 (500W).' },
-      { id: 'battery_mk2', name: '고밀도 축전지 셀', tier: 2, cost: 50, researched: false, req: ['efficient_dynamo'], desc: '배터리 용량이 25,000J로 2.5배 확장됩니다.' },
-      { id: 'farming', name: '서리밀 수경재배 농업', tier: 2, cost: 50, researched: false, req: ['mining_adv'], desc: '지속 가능한 농업 식량 재배기 건설 해금.' },
-      { id: 'adv_thermal', name: '지하 지열 히트파이프', tier: 2, cost: 55, researched: false, req: [], desc: '난방기 전력 소모 25% 절감 및 열 보존율 증가.' },
-      { id: 'o2_recycler', name: '산소 기류 확산 촉진', tier: 2, cost: 60, researched: false, req: ['reinforced_ladder'], desc: '산소 확산기의 산소 방출 반경과 분압 40% 증가.' },
-      { id: 'coal_power', name: '화력 석탄 발전 설비', tier: 3, cost: 90, researched: false, req: ['battery_mk2'], desc: '연속 대용량 발전을 위한 석탄 화력 발전기 해금.' },
-      { id: 'adv_scrub', name: '화학 촉매 CO2 스크러버', tier: 3, cost: 90, researched: false, req: ['o2_recycler'], desc: '하층 이산화탄소 대용량 자동 정화 시설 해금.' },
-      { id: 'hydroponics', name: '영양 농축 칼로리 가공', tier: 3, cost: 95, researched: false, req: ['farming'], desc: '식량 배양기 칼로리 생산량 +50% 증가.' },
-      { id: 'insulated_tiles', name: '에어로젤 단열 블록', tier: 3, cost: 100, researched: false, req: ['adv_thermal'], desc: '외부 소행성 혹한을 완벽 차단하는 초단열재 해금.' },
-      { id: 'auto_vent', name: '기압식 자동 조절 환기구', tier: 4, cost: 140, researched: false, req: ['adv_scrub', 'o2_recycler'], desc: '밀폐 기지 내부의 기체 순환 속도가 대폭 증가.' },
-      { id: 'grid_transformer', name: '스마트 전력 제어기', tier: 4, cost: 150, researched: false, req: ['coal_power'], desc: '전력 과부하 스파크 위험을 100% 방지하고 손실 감소.' },
-      { id: 'medical_stasis', name: '생체 활력 제세동실', tier: 4, cost: 160, researched: false, req: ['comfortable_cot', 'hydroponics'], desc: '저산소 질식 및 극저온 동상에 대한 저항력 50% 증가.' }
+      { id: 'mining_adv', tier: 1, cost: 25, researched: false, req: [] },
+      { id: 'reinforced_ladder', tier: 1, cost: 25, researched: false, req: [] },
+      { id: 'comfortable_cot', tier: 1, cost: 30, researched: false, req: [] },
+      { id: 'efficient_dynamo', tier: 1, cost: 35, researched: false, req: [] },
+      { id: 'battery_mk2', tier: 2, cost: 50, researched: false, req: ['efficient_dynamo'] },
+      { id: 'farming', tier: 2, cost: 50, researched: false, req: ['mining_adv'] },
+      { id: 'adv_thermal', tier: 2, cost: 55, researched: false, req: [] },
+      { id: 'o2_recycler', tier: 2, cost: 60, researched: false, req: ['reinforced_ladder'] },
+      { id: 'coal_power', tier: 3, cost: 90, researched: false, req: ['battery_mk2'] },
+      { id: 'adv_scrub', tier: 3, cost: 90, researched: false, req: ['o2_recycler'] },
+      { id: 'hydroponics', tier: 3, cost: 95, researched: false, req: ['farming'] },
+      { id: 'insulated_tiles', tier: 3, cost: 100, researched: false, req: ['adv_thermal'] },
+      { id: 'auto_vent', tier: 4, cost: 140, researched: false, req: ['adv_scrub', 'o2_recycler'] },
+      { id: 'grid_transformer', tier: 4, cost: 150, researched: false, req: ['coal_power'] },
+      { id: 'medical_stasis', tier: 4, cost: 160, researched: false, req: ['comfortable_cot', 'hydroponics'] }
     ];
 
     // --- GAME STATE ---
@@ -843,7 +1080,7 @@
       constructor() {
         this.tiles = new Uint8Array(COLS * ROWS);
         this.gasType = new Uint8Array(COLS * ROWS);
-        this.gasMass = new Float32Array(COLS * ROWS);   // Grams of gas (1000g = standard 1 atm)
+        this.gasMass = new Float32Array(COLS * ROWS);   // Grams of gas
         this.temperature = new Float32Array(COLS * ROWS); // Celsius
         this.wireGrid = new Uint8Array(COLS * ROWS);    // 1 if wire present
 
@@ -884,10 +1121,9 @@
         for (let y = 0; y < ROWS; y++) {
           for (let x = 0; x < COLS; x++) {
             const idx = y * COLS + x;
-            this.temperature[idx] = -35 + Math.random() * 5; // Default subzero asteroid cold
+            this.temperature[idx] = -35 + Math.random() * 5; // Subzero asteroid cold
 
             if (y < 4) {
-              // Vacuum space / asteroid surface crust
               this.tiles[idx] = T_GRANITE;
               this.gasType[idx] = GAS_VACUUM;
               this.gasMass[idx] = 0;
@@ -895,10 +1131,9 @@
               // Starting Crash-Landing Cavern
               this.tiles[idx] = T_EMPTY;
               this.gasType[idx] = GAS_O2;
-              this.gasMass[idx] = 1100 + Math.random() * 200; // Rich initial oxygen pocket
-              this.temperature[idx] = 18; // Warm pod heater zone
+              this.gasMass[idx] = 1100 + Math.random() * 200;
+              this.temperature[idx] = 18;
             } else {
-              // Solid Asteroid Strata
               const rand = Math.random();
               if (rand < 0.35) this.tiles[idx] = T_DIRT;
               else if (rand < 0.65) this.tiles[idx] = T_ICE;
@@ -920,7 +1155,7 @@
           this.setTile(35, y, T_LADDER);
         }
 
-        // Place starter manual generator, small battery, starter oxygen diffuser & cot
+        // Place starter manual generator, battery, oxygen diffuser & cot
         this.spawnBuilding('manual_gen', 29, 10);
         this.spawnBuilding('battery', 32, 10);
         this.spawnBuilding('o2_diffuser', 38, 10);
@@ -954,18 +1189,16 @@
 
       initColonists() {
         const specs = [
-          { name: 'Dr. Alex Vance', role: '수석 과학자', trait: '명석한 두뇌', color: '#00d2ff', digging: 3, science: 8, machinery: 4, farming: 2 },
-          { name: 'Elena Rostova', role: '수석 엔지니어', trait: '기계 조작 달인', color: '#f59e0b', digging: 5, science: 3, machinery: 8, farming: 3 },
-          { name: 'Marcus Briggs', role: '베테랑 광부', trait: '무쇠 체력', color: '#ef4444', digging: 8, science: 1, machinery: 4, farming: 3 },
-          { name: 'Dr. Hana Park', role: '생태 식물학자', trait: '초록빛 손길', color: '#10b981', digging: 3, science: 5, machinery: 2, farming: 8 }
+          { name: 'Dr. Alex Vance', color: '#00d2ff', digging: 3, science: 8, machinery: 4, farming: 2 },
+          { name: 'Elena Rostova', color: '#f59e0b', digging: 5, science: 3, machinery: 8, farming: 3 },
+          { name: 'Marcus Briggs', color: '#ef4444', digging: 8, science: 1, machinery: 4, farming: 3 },
+          { name: 'Dr. Hana Park', color: '#10b981', digging: 3, science: 5, machinery: 2, farming: 8 }
         ];
 
         specs.forEach((s, idx) => {
           this.colonists.push({
             id: 'c_' + idx,
             name: s.name,
-            role: s.role,
-            trait: s.trait,
             color: s.color,
             x: (30 + idx * 3) * TILE_SIZE + 14,
             y: 11 * TILE_SIZE + 24,
@@ -973,14 +1206,14 @@
             vy: 0,
             onGround: true,
             onLadder: false,
-            facing: 1, // 1 = right, -1 = left
+            facing: 1,
 
             // Needs (0.0 to 100.0)
             breath: 100,
             calories: 100,
             energy: 100,
             stress: 5,
-            bodyTemp: 37, // Celsius
+            bodyTemp: 37,
 
             // Skills
             skills: {
@@ -991,7 +1224,7 @@
             },
 
             // State & Actions
-            state: 'idle', // 'idle', 'walking', 'mining', 'building', 'operating', 'sleeping', 'researching', 'eating', 'suffocating'
+            state: 'idle',
             currentTask: null,
             targetX: null,
             targetY: null,
@@ -1039,10 +1272,9 @@
     // --- CELLULAR GAS DYNAMICS & ATMOSPHERIC ENGINE ---
     class GasSimulation {
       static update(state, dt) {
-        const { gasType, gasMass, tiles } = state;
+        const { gasType, gasMass } = state;
         const diffRate = 0.25 * dt;
 
-        // Cellular diffusion and gravity separation
         for (let y = ROWS - 2; y >= 1; y--) {
           for (let x = 1; x < COLS - 1; x++) {
             const idx = y * COLS + x;
@@ -1052,11 +1284,10 @@
             const myMass = gasMass[idx];
             if (myMass <= 0.1 || myType === GAS_VACUUM) continue;
 
-            // Downward sink for heavy CO2
+            // Sinking of heavy CO2
             if (myType === GAS_CO2) {
               const belowIdx = (y + 1) * COLS + x;
               if (!state.isSolid(x, y + 1)) {
-                // If below has lighter gas or vacuum, swap/displace
                 if (gasType[belowIdx] === GAS_VACUUM || gasType[belowIdx] === GAS_O2) {
                   const flow = Math.min(myMass * 0.4, 200 * dt);
                   gasMass[idx] -= flow;
@@ -1064,7 +1295,6 @@
                     gasType[belowIdx] = GAS_CO2;
                     gasMass[belowIdx] = flow;
                   } else {
-                    // Mix / displace
                     gasMass[belowIdx] += flow;
                   }
                 }
@@ -1109,7 +1339,6 @@
         let totalStored = 0;
         let maxStorage = 0;
 
-        // Calculate generation
         state.buildings.forEach(b => {
           const def = BUILDINGS_DEF[b.type];
           if (!b.active) return;
@@ -1123,7 +1352,6 @@
               state.resources.coal -= 0.05 * dt;
               totalGen += def.power;
 
-              // Emits CO2 and warmth
               const cellIdx = b.y * COLS + b.x;
               state.gasType[cellIdx] = GAS_CO2;
               state.gasMass[cellIdx] += 15 * dt;
@@ -1143,12 +1371,10 @@
           }
         });
 
-        // Power balance
         const netWatts = totalGen - totalLoad;
         const deltaJoules = netWatts * dt;
 
         if (deltaJoules > 0) {
-          // Charge batteries
           let toStore = deltaJoules;
           state.buildings.filter(b => b.type === 'battery').forEach(bat => {
             const cap = TECH_TREE.find(t => t.id === 'battery_mk2')?.researched ? 25000 : 10000;
@@ -1158,7 +1384,6 @@
             toStore -= added;
           });
         } else if (deltaJoules < 0) {
-          // Drain batteries
           let needed = -deltaJoules;
           state.buildings.filter(b => b.type === 'battery').forEach(bat => {
             const taken = Math.min(bat.energyStored, needed);
@@ -1167,14 +1392,12 @@
           });
         }
 
-        // Machinery Action if powered
         const isPowered = (totalGen >= totalLoad) || totalStored > 50;
 
         state.buildings.forEach(b => {
           if (!b.active || !isPowered) return;
 
           if (b.type === 'o2_diffuser') {
-            // Oxygen generator consumes ice/water
             if (state.resources.ice >= 0.08 * dt) {
               state.resources.ice -= 0.08 * dt;
               const idx = b.y * COLS + b.x;
@@ -1182,7 +1405,6 @@
               state.gasMass[idx] = Math.min(2200, state.gasMass[idx] + 240 * dt);
             }
           } else if (b.type === 'co2_scrubber') {
-            // Scrub CO2 in 3x3 footprint
             for (let dy = -1; dy <= 2; dy++) {
               for (let dx = -1; dx <= 2; dx++) {
                 const sx = b.x + dx;
@@ -1197,7 +1419,6 @@
               }
             }
           } else if (b.type === 'space_heater') {
-            // Radiate warmth in 5x5 radius
             for (let dy = -2; dy <= 2; dy++) {
               for (let dx = -2; dx <= 2; dx++) {
                 const sx = b.x + dx;
@@ -1209,12 +1430,11 @@
               }
             }
           } else if (b.type === 'planter') {
-            // Passive crop growth
             b.growthTimer = (b.growthTimer || 0) + dt;
             if (b.growthTimer >= 45) {
               b.growthTimer = 0;
               state.resources.food += 350;
-              hud.showAlert('🌾 서리밀 수확 완료 (+350 kcal)', 'success');
+              hud.showAlert(t('toastHarvest'), 'success');
             }
           }
         });
@@ -1230,41 +1450,38 @@
         const cy = Math.floor(colonist.y / TILE_SIZE);
         const cellIdx = cy * COLS + cx;
 
-        // 1. BREATH & RESPIRATION
+        // 1. Breath
         const localGas = state.gasType[cellIdx];
         const localMass = state.gasMass[cellIdx];
         const hasOxygen = (localGas === GAS_O2 && localMass > 250);
 
         if (hasOxygen) {
           colonist.breath = Math.min(100, colonist.breath + 18 * dt);
-          // Respiration: inhale O2, exhale CO2
           state.gasMass[cellIdx] = Math.max(0, state.gasMass[cellIdx] - 12 * dt);
         } else {
-          // Breath holding / Suffocating
           colonist.breath = Math.max(0, colonist.breath - 12 * dt);
           colonist.stress = Math.min(100, colonist.stress + 5 * dt);
 
           if (colonist.breath <= 0) {
-            hud.showAlert(`🚨 ${colonist.name} 산소 부족으로 질식 위험!`, 'danger');
+            hud.showAlert(t('toastSuffocationAlert').replace('{name}', colonist.name), 'danger');
             audio.playAlarm();
           }
         }
 
-        // 2. CALORIES & METABOLISM
+        // 2. Calories
         colonist.calories = Math.max(0, colonist.calories - 0.7 * dt);
         if (colonist.calories < 25 && state.resources.food >= 200) {
-          // Eat meal
           state.resources.food -= 200;
           colonist.calories = Math.min(100, colonist.calories + 40);
           colonist.stress = Math.max(0, colonist.stress - 5);
         }
 
-        // 3. FATIGUE & SLEEP
+        // 3. Fatigue
         if (colonist.state !== 'sleeping') {
           colonist.energy = Math.max(0, colonist.energy - 0.5 * dt);
         }
 
-        // 4. THERMAL BODY REGULATION
+        // 4. Thermal
         const ambientTemp = state.temperature[cellIdx] || -20;
         if (ambientTemp < -10) {
           colonist.bodyTemp = Math.max(30, colonist.bodyTemp - 0.2 * dt);
@@ -1273,19 +1490,17 @@
           colonist.bodyTemp = Math.min(37, colonist.bodyTemp + 0.4 * dt);
         }
 
-        // 5. TASK SELECTION & ACTION STATE MACHINE
+        // 5. State Machine
         this.runStateMachine(colonist, state, dt);
 
-        // 6. PHYSICS & PLATFORM MOVEMENT
+        // 6. Physics
         this.applyPhysics(colonist, state, dt);
       }
 
       static runStateMachine(c, state, dt) {
         c.animTimer += dt * 6;
 
-        // Emergency Needs Priority
         if (c.energy < 15 && c.state !== 'sleeping') {
-          // Seek bed or sleep on floor
           const freeBed = state.buildings.find(b => b.type === 'cot' && !b.currentWorker);
           if (freeBed) {
             this.assignTask(c, 'goto_bed', freeBed.x * TILE_SIZE + 14, freeBed.y * TILE_SIZE + 24, freeBed);
@@ -1305,9 +1520,7 @@
           return;
         }
 
-        // Idle / Task Acquisition
         if (c.state === 'idle') {
-          // Priority 1: Digging tasks
           if (state.digTasks.size > 0) {
             let closest = null;
             let minDist = Infinity;
@@ -1325,7 +1538,6 @@
             }
           }
 
-          // Priority 2: Building construction tasks
           if (state.buildTasks.size > 0) {
             for (const [key, bTask] of state.buildTasks) {
               const [bx, by] = key.split(',').map(Number);
@@ -1334,7 +1546,6 @@
             }
           }
 
-          // Priority 3: Researching
           const activeTech = TECH_TREE.find(t => !t.researched && !t.locked && t.cost <= state.resources.science + 100);
           const rStation = state.buildings.find(b => b.type === 'research_station' && !b.currentWorker);
           if (activeTech && rStation) {
@@ -1342,14 +1553,12 @@
             return;
           }
 
-          // Priority 4: Operating Generator if power low
           const wheel = state.buildings.find(b => b.type === 'manual_gen' && !b.currentWorker);
           if (wheel) {
             this.assignTask(c, 'operating', wheel.x * TILE_SIZE + 14, wheel.y * TILE_SIZE + 24, wheel);
             return;
           }
 
-          // Idle wandering
           if (Math.random() < 0.02) {
             const wanderOffset = (Math.random() - 0.5) * 120;
             c.targetX = Math.max(50, Math.min((COLS - 2) * TILE_SIZE, c.x + wanderOffset));
@@ -1357,25 +1566,22 @@
           }
         }
 
-        // Performing Specific Tasks
         if (c.state === 'mining') {
           const task = c.currentTask;
           const dist = Math.hypot(c.x - task.tx * TILE_SIZE - 14, c.y - task.ty * TILE_SIZE - 14);
           if (dist > 36) {
             this.moveToward(c, task.tx * TILE_SIZE + 14, task.ty * TILE_SIZE + 14);
           } else {
-            // Mine tile with pickaxe
             c.facing = (task.tx * TILE_SIZE + 14 > c.x) ? 1 : -1;
             c.workProgress += (1.5 + c.skills.digging * 0.4) * dt;
             if (Math.random() < 0.2) audio.playDig();
 
             if (c.workProgress >= 4) {
               const tileType = state.getTile(task.tx, task.ty);
-              // Yield resources based on tile material
               if (tileType === T_ICE) state.resources.ice += 12;
               else if (tileType === T_METAL_ORE) state.resources.metal += 8;
               else if (tileType === T_COAL) state.resources.coal += 10;
-              else if (tileType === T_DIRT) state.resources.food += 5; // trace seeds
+              else if (tileType === T_DIRT) state.resources.food += 5;
 
               state.setTile(task.tx, task.ty, T_EMPTY);
               state.digTasks.delete(task.key);
@@ -1415,7 +1621,6 @@
           } else {
             b.currentWorker = c;
             c.facing = 1;
-            // Running on dynamo generator
             c.energy = Math.max(0, c.energy - 1.2 * dt);
             if (c.energy < 20) {
               b.currentWorker = null;
@@ -1473,7 +1678,6 @@
           c.vx = 0;
         }
 
-        // Ladder vertical climbing
         if (c.onLadder && Math.abs(dy) > 8) {
           c.vy = Math.sign(dy) * 40;
         }
@@ -1486,14 +1690,12 @@
         c.onLadder = (state.getTile(cx, cy) === T_LADDER || state.getTile(cx, cy + 1) === T_LADDER);
 
         if (!c.onLadder) {
-          c.vy += 180 * dt; // Gravity
+          c.vy += 180 * dt;
         }
 
-        // Update positions
         c.x += c.vx * dt;
         c.y += c.vy * dt;
 
-        // Platform collision checks
         const footX = Math.floor(c.x / TILE_SIZE);
         const footY = Math.floor((c.y + 12) / TILE_SIZE);
 
@@ -1505,7 +1707,6 @@
           c.onGround = false;
         }
 
-        // Horizontal friction
         c.vx *= 0.85;
       }
     }
@@ -1521,7 +1722,8 @@
         if (state.activeCrisis) {
           state.crisisTimer -= dt;
           if (state.crisisTimer <= 0) {
-            hud.showAlert(`✅ 위기 상황 종료: [${state.activeCrisis.name}]이 해소되었습니다.`, 'success');
+            const cDef = I18N[curLang]?.crises?.[state.activeCrisis.type] || state.activeCrisis;
+            hud.showAlert(t('toastCrisisEnd').replace('{name}', cDef.name), 'success');
             state.activeCrisis = null;
           }
         }
@@ -1530,10 +1732,8 @@
       static triggerRandomCrisis(state) {
         const events = [
           {
-            name: '소행성 극저온 한파 (Cold Snap)',
             type: 'cold_snap',
             duration: 50,
-            desc: '소행성 심부에서 극저온 냉기가 몰아쳐 전 기지 기온이 -20℃ 급감합니다!',
             effect: () => {
               for (let i = 0; i < state.temperature.length; i++) {
                 state.temperature[i] -= 15;
@@ -1541,10 +1741,8 @@
             }
           },
           {
-            name: '지하 고압 CO2 가스포켓 분출',
             type: 'gas_leak',
             duration: 40,
-            desc: '균열에서 대량의 무거운 이산화탄소가 기지 하부로 유입됩니다!',
             effect: () => {
               const startX = 25 + Math.floor(Math.random() * 20);
               const startY = 15 + Math.floor(Math.random() * 10);
@@ -1558,10 +1756,8 @@
             }
           },
           {
-            name: '발전 설비 합선 과부하',
             type: 'blackout',
             duration: 35,
-            desc: '전력망에 순간 과부하가 발생하여 배터리 충전량이 방전되었습니다!',
             effect: () => {
               state.buildings.filter(b => b.type === 'battery').forEach(bat => bat.energyStored = 0);
             }
@@ -1572,7 +1768,9 @@
         state.activeCrisis = crisis;
         state.crisisTimer = crisis.duration;
         crisis.effect();
-        hud.showAlert(`🚨 [돌발 위기] ${crisis.name}: ${crisis.desc}`, 'danger');
+
+        const cDef = I18N[curLang]?.crises?.[crisis.type] || { name: crisis.type, desc: '' };
+        hud.showAlert(t('toastCrisisAlert').replace('{name}', cDef.name).replace('{desc}', cDef.desc), 'danger');
         audio.playAlarm();
       }
     }
@@ -1599,34 +1797,23 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.save();
 
-        // Camera Pan & Zoom Transform
         ctx.translate(canvas.width / 2, canvas.height / 2);
         ctx.scale(cam.zoom, cam.zoom);
         ctx.translate(-cam.x, -cam.y);
 
-        // 1. Draw World Tiles
         this.drawTiles();
-
-        // 2. Draw Atmosphere / Gas Layer
         this.drawAtmosphere();
 
-        // 3. Draw Power Grid (Wires & Connections)
         if (state.overlay === 'power' || state.selectedTool.cat === 'power') {
           this.drawPowerGrid();
         }
 
-        // 4. Draw Thermal Layer
         if (state.overlay === 'temp') {
           this.drawThermalOverlay();
         }
 
-        // 5. Draw Buildings & Machines
         this.drawBuildings();
-
-        // 6. Draw Construction & Dig Blueprints
         this.drawBlueprints();
-
-        // 7. Draw Colonists & Animations
         this.drawColonists();
 
         ctx.restore();
@@ -1641,7 +1828,6 @@
             const py = y * TILE_SIZE;
 
             if (t === T_EMPTY) {
-              // Deep cavern background
               ctx.fillStyle = '#060a12';
               ctx.fillRect(px, py, TILE_SIZE, TILE_SIZE);
               ctx.strokeStyle = 'rgba(255,255,255,0.02)';
@@ -1720,17 +1906,14 @@
             const density = Math.min(1.0, gMass / 1500);
 
             if (gType === GAS_O2) {
-              // Breathable Cyan Oxygen
               const alpha = isGasOverlay ? density * 0.75 : density * 0.18;
               ctx.fillStyle = `rgba(0, 210, 255, ${alpha})`;
               ctx.fillRect(px, py, TILE_SIZE, TILE_SIZE);
             } else if (gType === GAS_CO2) {
-              // Heavy Sinking Grey CO2
               const alpha = isGasOverlay ? density * 0.85 : density * 0.35;
               ctx.fillStyle = `rgba(100, 116, 139, ${alpha})`;
               ctx.fillRect(px, py, TILE_SIZE, TILE_SIZE);
             } else if (gType === GAS_PO2) {
-              // Greenish Polluted Gas
               const alpha = isGasOverlay ? density * 0.8 : density * 0.3;
               ctx.fillStyle = `rgba(34, 197, 94, ${alpha})`;
               ctx.fillRect(px, py, TILE_SIZE, TILE_SIZE);
@@ -1756,7 +1939,6 @@
               ctx.arc(px, py, 4, 0, Math.PI * 2);
               ctx.fill();
 
-              // Connect to adjacent wires
               const neighbors = [[1, 0], [0, 1]];
               neighbors.forEach(([dx, dy]) => {
                 const nx = x + dx;
@@ -1782,7 +1964,6 @@
             const px = x * TILE_SIZE;
             const py = y * TILE_SIZE;
 
-            // Blue (-40C) -> Cyan (0C) -> Orange (25C) -> Red (45C)
             let color = 'rgba(30, 58, 138, 0.4)';
             if (temp > 15) color = 'rgba(234, 88, 12, 0.5)';
             else if (temp > 0) color = 'rgba(14, 165, 233, 0.4)';
@@ -1804,7 +1985,6 @@
           if (b.type === 'manual_gen') {
             ctx.fillStyle = '#334155';
             ctx.fillRect(px + 4, py + 8, pw - 8, ph - 8);
-            // Wheel circle
             ctx.strokeStyle = '#38bdf8';
             ctx.lineWidth = 3;
             ctx.beginPath();
@@ -1814,7 +1994,7 @@
             ctx.fillStyle = '#1e293b';
             ctx.fillRect(px + 2, py + 4, pw - 4, ph - 4);
             ctx.fillStyle = '#ef4444';
-            ctx.fillRect(px + 8, py + ph - 16, pw - 16, 10); // Glowing firebox
+            ctx.fillRect(px + 8, py + ph - 16, pw - 16, 10);
           } else if (b.type === 'battery') {
             ctx.fillStyle = '#0f172a';
             ctx.fillRect(px + 2, py + 2, pw - 4, ph - 4);
@@ -1823,7 +2003,6 @@
           } else if (b.type === 'o2_diffuser') {
             ctx.fillStyle = '#0284c7';
             ctx.fillRect(px + 2, py + 4, pw - 4, ph - 4);
-            // Cyan fan grill
             ctx.fillStyle = '#7dd3fc';
             ctx.beginPath();
             ctx.arc(px + pw / 2, py + 14, 8, 0, Math.PI * 2);
@@ -1841,14 +2020,14 @@
           } else if (b.type === 'cot') {
             ctx.fillStyle = '#1e293b';
             ctx.fillRect(px + 2, py + 12, pw - 4, ph - 14);
-            ctx.fillStyle = '#94a3b8'; // Pillow
+            ctx.fillStyle = '#94a3b8';
             ctx.fillRect(px + 4, py + 6, 12, 10);
-            ctx.fillStyle = '#3b82f6'; // Blanket
+            ctx.fillStyle = '#3b82f6';
             ctx.fillRect(px + 18, py + 10, pw - 22, ph - 12);
           } else if (b.type === 'research_station') {
             ctx.fillStyle = '#581c87';
             ctx.fillRect(px + 4, py + 6, pw - 8, ph - 8);
-            ctx.fillStyle = '#c084fc'; // Monitor screen
+            ctx.fillStyle = '#c084fc';
             ctx.fillRect(px + 10, py + 10, 16, 12);
           } else if (b.type === 'planter') {
             ctx.fillStyle = '#166534';
@@ -1897,18 +2076,17 @@
           ctx.save();
           ctx.translate(x, y);
 
-          // Selection highlight
           if (state.selectedColonist === c) {
             ctx.strokeStyle = '#00d2ff';
             ctx.lineWidth = 1.5;
             ctx.strokeRect(-12, -26, 24, 38);
           }
 
-          // Body Silhouette (Procedural Colonist)
+          // Suit
           ctx.fillStyle = c.color;
-          ctx.fillRect(-6, -16, 12, 18); // Torso/Suit
+          ctx.fillRect(-6, -16, 12, 18);
 
-          // Head / Helmet
+          // Helmet
           ctx.fillStyle = '#e2e8f0';
           ctx.beginPath();
           ctx.arc(0, -20, 7, 0, Math.PI * 2);
@@ -1918,18 +2096,18 @@
           ctx.fillStyle = '#0284c7';
           ctx.fillRect(c.facing > 0 ? 0 : -5, -22, 5, 4);
 
-          // Breath Bubble / Suffocating Gasping Animation
+          // Breath Bubble / Suffocating Gasp
           if (c.breath < 35) {
-            ctx.fillStyle = 'rgba(239, 68, 68, 0.8)';
-            ctx.font = '12px sans-serif';
-            ctx.fillText('⚠ GASP', -14, -32);
+            ctx.fillStyle = 'rgba(239, 68, 68, 0.9)';
+            ctx.font = 'bold 11px sans-serif';
+            ctx.fillText(t('animGasp'), -16, -32);
           } else if (c.state === 'sleeping') {
             ctx.fillStyle = '#94a3b8';
             ctx.font = '10px sans-serif';
-            ctx.fillText('Zzz...', 4, -28);
+            ctx.fillText(t('animSleep'), 4, -28);
           }
 
-          // Pickaxe / Tool in Hand
+          // Pickaxe in Hand
           if (c.state === 'mining') {
             const swing = Math.sin(c.animTimer) * 12;
             ctx.strokeStyle = '#94a3b8';
@@ -1950,9 +2128,7 @@
       constructor(state) {
         this.state = state;
         this.setupEventListeners();
-        this.renderColonistCards();
-        this.renderBuildShelf('order');
-        this.renderTechTree();
+        this.applyLanguage();
       }
 
       setupEventListeners() {
@@ -2000,6 +2176,14 @@
           e.target.innerText = audio.enabled ? '🔊' : '🔇';
         });
 
+        // Language Switcher Toggle
+        document.getElementById('btn-lang').addEventListener('click', () => {
+          curLang = (curLang === 'ko') ? 'en' : 'ko';
+          localStorage.setItem('frostfall_lang', curLang);
+          this.applyLanguage();
+          audio.playClick();
+        });
+
         // Help Modal
         document.getElementById('btn-help').addEventListener('click', () => {
           document.getElementById('help-modal').style.display = 'block';
@@ -2013,7 +2197,7 @@
         // Save Button
         document.getElementById('btn-save').addEventListener('click', () => {
           saveGame(this.state);
-          this.showAlert('💾 게임 상태가 로컬 브라우저에 저장되었습니다.', 'success');
+          this.showAlert(t('toastSave'), 'success');
           audio.playChime();
         });
 
@@ -2032,6 +2216,66 @@
             this.setOverlay('temp');
           }
         });
+      }
+
+      applyLanguage() {
+        document.documentElement.lang = curLang;
+        document.getElementById('btn-lang').innerText = t('langName');
+        document.getElementById('txt-title-prefix').innerText = t('titlePrefix');
+        document.getElementById('txt-title-sub').innerText = t('titleSub');
+
+        // Tooltips for resource pills
+        document.getElementById('pill-o2').title = t('statO2Title');
+        document.getElementById('pill-power').title = t('statPowerTitle');
+        document.getElementById('pill-food').title = t('statFoodTitle');
+        document.getElementById('pill-metal').title = t('statMetalTitle');
+        document.getElementById('pill-ice').title = t('statIceTitle');
+        document.getElementById('pill-coal').title = t('statCoalTitle');
+        document.getElementById('pill-science').title = t('statScienceTitle');
+
+        // Control Buttons
+        document.getElementById('lbl-cycle-prefix').innerText = t('cycleLabel');
+        document.getElementById('btn-pause').title = t('pauseTitle');
+        document.getElementById('btn-speed-1').title = t('speed1Title');
+        document.getElementById('btn-speed-2').title = t('speed2Title');
+        document.getElementById('btn-speed-3').title = t('speed3Title');
+        document.getElementById('lbl-btn-tech').innerText = t('techBtn');
+        document.getElementById('btn-tech').title = t('techTitle');
+        document.getElementById('btn-sound').title = t('soundTitle');
+        document.getElementById('btn-save').title = t('saveTitle');
+        document.getElementById('btn-help').title = t('helpTitle');
+        document.getElementById('btn-lang').title = t('langBtnTitle');
+
+        // Overlays
+        document.getElementById('ov-normal').innerText = t('overlayNormal');
+        document.getElementById('ov-gas').innerText = t('overlayGas');
+        document.getElementById('ov-power').innerText = t('overlayPower');
+        document.getElementById('ov-temp').innerText = t('overlayTemp');
+
+        // Categories
+        document.getElementById('cat-order').innerText = t('catOrder');
+        document.getElementById('cat-base').innerText = t('catBase');
+        document.getElementById('cat-power').innerText = t('catPower');
+        document.getElementById('cat-oxygen').innerText = t('catOxygen');
+        document.getElementById('cat-food').innerText = t('catFood');
+        document.getElementById('cat-science').innerText = t('catScience');
+
+        // Modals
+        document.getElementById('modal-tech-title').innerText = t('techModalTitle');
+        document.getElementById('help-title').innerText = t('helpTitleText');
+        document.getElementById('help-intro').innerHTML = `<strong>${curLang === 'ko' ? '배경:' : 'Background:'}</strong> ${t('helpIntro').replace(/^배경:\s*|^Background:\s*/, '')}`;
+        document.getElementById('help-li-1').innerHTML = `<strong>${curLang === 'ko' ? '화면 조작:' : 'Camera:'}</strong> ${t('help1').replace(/^화면 조작:\s*|^Camera:\s*/, '')}`;
+        document.getElementById('help-li-2').innerHTML = `<strong>${curLang === 'ko' ? '굴착:' : 'Mining:'}</strong> ${t('help2').replace(/^굴착:\s*|^Mining:\s*/, '')}`;
+        document.getElementById('help-li-3').innerHTML = `<strong>${curLang === 'ko' ? '산소 유지:' : 'Oxygen:'}</strong> ${t('help3').replace(/^산소 유지:\s*|^Oxygen:\s*/, '')}`;
+        document.getElementById('help-li-4').innerHTML = `<strong>${curLang === 'ko' ? '전력망:' : 'Power Grid:'}</strong> ${t('help4').replace(/^전력망:\s*|^Power Grid:\s*/, '')}`;
+        document.getElementById('help-li-5').innerHTML = `<strong>${curLang === 'ko' ? '거주민 관리:' : 'Colonists:'}</strong> ${t('help5').replace(/^거주민 관리:\s*|^Colonists:\s*/, '')}`;
+        document.getElementById('help-li-6').innerHTML = `<strong>${curLang === 'ko' ? '오버레이:' : 'Hotkeys:'}</strong> ${t('help6')}`;
+        document.getElementById('btn-close-help').innerText = t('helpClose');
+
+        // Re-render shelf and cards
+        this.renderBuildShelf(this.state.selectedTool.cat);
+        this.renderColonistCards();
+        this.renderTechTree();
       }
 
       setSpeed(s) {
@@ -2059,51 +2303,55 @@
 
         if (cat === 'order') {
           shelf.innerHTML = `
-            <div class="build-card selected" data-type="dig">
+            <div class="build-card ${this.state.selectedTool.id === 'dig' ? 'selected' : ''}" data-type="dig">
               <span class="card-icon">⛏</span>
-              <span class="card-title">타일 굴착</span>
-              <span class="card-cost">드래그 영역</span>
+              <span class="card-title">${t('toolDig')}</span>
+              <span class="card-cost">${t('toolDigCost')}</span>
             </div>
-            <div class="build-card" data-type="cancel">
+            <div class="build-card ${this.state.selectedTool.id === 'cancel' ? 'selected' : ''}" data-type="cancel">
               <span class="card-icon">❌</span>
-              <span class="card-title">명령 취소</span>
-              <span class="card-cost">작업 해제</span>
+              <span class="card-title">${t('toolCancel')}</span>
+              <span class="card-cost">${t('toolCancelCost')}</span>
             </div>
           `;
         } else if (cat === 'base') {
           shelf.innerHTML = `
-            <div class="build-card" data-type="tile_floor">
+            <div class="build-card ${this.state.selectedTool.id === 'tile_floor' ? 'selected' : ''}" data-type="tile_floor">
               <span class="card-icon">🧱</span>
-              <span class="card-title">구조 타일</span>
-              <span class="card-cost">금속 2</span>
+              <span class="card-title">${t('tileFloor')}</span>
+              <span class="card-cost">${t('costMetal')} 2</span>
             </div>
-            <div class="build-card" data-type="tile_ladder">
+            <div class="build-card ${this.state.selectedTool.id === 'tile_ladder' ? 'selected' : ''}" data-type="tile_ladder">
               <span class="card-icon">🪜</span>
-              <span class="card-title">사다리</span>
-              <span class="card-cost">금속 2</span>
+              <span class="card-title">${t('tileLadder')}</span>
+              <span class="card-cost">${t('costMetal')} 2</span>
             </div>
-            <div class="build-card" data-type="tile_insulated">
+            <div class="build-card ${this.state.selectedTool.id === 'tile_insulated' ? 'selected' : ''}" data-type="tile_insulated">
               <span class="card-icon">🛡</span>
-              <span class="card-title">단열 타일</span>
-              <span class="card-cost">금속 5</span>
+              <span class="card-title">${t('tileInsulated')}</span>
+              <span class="card-cost">${t('costMetal')} 5</span>
             </div>
           `;
         } else {
-          // Filter buildings by category
           Object.values(BUILDINGS_DEF).filter(b => b.cat === cat).forEach(def => {
             const isUnlocked = !def.tech || TECH_TREE.find(t => t.id === def.tech)?.researched;
-            const costStr = Object.entries(def.cost).map(([k, v]) => `${k} ${v}`).join(' ');
+            const costStr = Object.entries(def.cost).map(([k, v]) => {
+              const resName = (k === 'metal') ? t('costMetal') : ((k === 'ice') ? t('costIce') : t('costCoal'));
+              return `${resName} ${v}`;
+            }).join(' ');
+
+            const bLoc = I18N[curLang]?.buildings?.[def.id] || { name: def.id, desc: '' };
+
             shelf.innerHTML += `
-              <div class="build-card ${isUnlocked ? '' : 'disabled'}" data-type="b_${def.id}">
+              <div class="build-card ${isUnlocked ? '' : 'disabled'} ${this.state.selectedTool.id === 'b_' + def.id ? 'selected' : ''}" data-type="b_${def.id}" title="${bLoc.desc}">
                 <span class="card-icon">${this.getIconForDef(def.id)}</span>
-                <span class="card-title">${def.name}</span>
-                <span class="card-cost">${isUnlocked ? costStr : '🔒 연구 필요'}</span>
+                <span class="card-title">${bLoc.name}</span>
+                <span class="card-cost">${isUnlocked ? costStr : t('costReqTech')}</span>
               </div>
             `;
           });
         }
 
-        // Add selection listener
         shelf.querySelectorAll('.build-card').forEach(card => {
           card.addEventListener('click', () => {
             if (card.classList.contains('disabled')) return;
@@ -2131,26 +2379,33 @@
         this.state.colonists.forEach(c => {
           const card = document.createElement('div');
           card.className = 'colonist-card' + (this.state.selectedColonist === c ? ' selected' : '');
+
+          const roleInfo = I18N[curLang]?.colonistRoles?.[c.name] || { role: '', trait: '' };
+
           card.innerHTML = `
             <div class="c-header">
               <span class="c-name"><span style="color:${c.color};">●</span> ${c.name}</span>
               <span class="c-status ${c.breath < 30 ? 'danger' : ''}">${this.getStatusText(c)}</span>
             </div>
+            <div class="c-subinfo">
+              <span>${roleInfo.role}</span>
+              <span style="color:${c.color};">${roleInfo.trait}</span>
+            </div>
             <div class="stat-bars">
               <div class="bar-row">
-                <span>산소</span>
+                <span>${t('statO2')}</span>
                 <div class="bar-track"><div class="bar-fill o2" style="width:${c.breath}%;"></div></div>
               </div>
               <div class="bar-row">
-                <span>칼로리</span>
+                <span>${t('statCalories')}</span>
                 <div class="bar-track"><div class="bar-fill cal" style="width:${c.calories}%;"></div></div>
               </div>
               <div class="bar-row">
-                <span>기력</span>
+                <span>${t('statEnergy')}</span>
                 <div class="bar-track"><div class="bar-fill fatigue" style="width:${c.energy}%;"></div></div>
               </div>
               <div class="bar-row">
-                <span>스트레스</span>
+                <span>${t('statStress')}</span>
                 <div class="bar-track"><div class="bar-fill stress" style="width:${c.stress}%;"></div></div>
               </div>
             </div>
@@ -2167,13 +2422,13 @@
       }
 
       getStatusText(c) {
-        if (c.breath < 25) return '🚨 질식 위험!';
-        if (c.state === 'mining') return '⛏ 굴착 작업 중';
-        if (c.state === 'building') return '🧱 건설 작업 중';
-        if (c.state === 'operating') return '⚡ 발전기 가동';
-        if (c.state === 'sleeping') return '💤 수면 중';
-        if (c.state === 'researching') return '🔬 데이터 분석';
-        return '대기 중';
+        if (c.breath < 25) return t('statusSuffocating');
+        if (c.state === 'mining') return t('statusMining');
+        if (c.state === 'building') return t('statusBuilding');
+        if (c.state === 'operating') return t('statusOperating');
+        if (c.state === 'sleeping') return t('statusSleeping');
+        if (c.state === 'researching') return t('statusResearching');
+        return t('statusIdle');
       }
 
       renderTechTree() {
@@ -2185,15 +2440,17 @@
           if (tech.researched) statusClass = 'researched';
           else if (this.state.resources.science < tech.cost) statusClass = 'locked';
 
+          const tDef = I18N[curLang]?.techs?.[tech.id] || { name: tech.id, desc: '' };
+
           const card = document.createElement('div');
           card.className = `tech-card ${statusClass}`;
           card.innerHTML = `
             <div class="tech-title">
-              <span>${tech.name}</span>
+              <span>${tDef.name}</span>
               <span class="tech-cost">${tech.cost} RP</span>
             </div>
-            <div class="tech-desc">${tech.desc}</div>
-            <div class="tech-unlocks">${tech.researched ? '✔ 연구 완료' : (statusClass === 'available' ? '클릭하여 즉시 해금' : '🔒 RP 부족')}</div>
+            <div class="tech-desc">${tDef.desc}</div>
+            <div class="tech-unlocks">${tech.researched ? t('techResearched') : (statusClass === 'available' ? t('techCanUnlock') : t('techNeedRP'))}</div>
           `;
 
           if (statusClass === 'available') {
@@ -2201,7 +2458,7 @@
               this.state.resources.science -= tech.cost;
               tech.researched = true;
               audio.playChime();
-              this.showAlert(`✨ 연구 해금 완료: [${tech.name}]`, 'success');
+              hud.showAlert(t('toastTechUnlocked').replace('{name}', tDef.name), 'success');
               this.renderTechTree();
               this.renderBuildShelf(this.state.selectedTool.cat);
             });
@@ -2232,7 +2489,6 @@
         document.getElementById('stat-coal').innerText = Math.floor(state.resources.coal);
         document.getElementById('stat-rp').innerText = `${Math.floor(state.resources.science)} RP`;
 
-        // Update Colonists
         this.renderColonistCards();
       }
     }
@@ -2257,12 +2513,10 @@
         c.addEventListener('mousedown', (e) => {
           audio.init();
           if (e.button === 1 || e.button === 2 || e.shiftKey) {
-            // Camera Pan
             this.isPan = true;
             this.dragStartX = e.clientX;
             this.dragStartY = e.clientY;
           } else if (e.button === 0) {
-            // Action / Drag Selection
             this.isDragging = true;
             const worldPos = this.screenToWorld(e.clientX, e.clientY);
             this.dragStartX = worldPos.x;
@@ -2414,31 +2668,20 @@
       if (state.speed > 0) {
         const simDt = dt * state.speed;
 
-        // 1. Time / Cycle Progression
-        state.dayTime += (simDt / 120); // 120 sec per cycle
+        state.dayTime += (simDt / 120);
         if (state.dayTime >= 1.0) {
           state.dayTime = 0;
           state.cycle++;
-          hud.showAlert(`🌅 새 사이클 시작: CYCLE ${state.cycle}`, 'info');
-          saveGame(state); // Daily auto-save
+          hud.showAlert(t('toastNewCycle').replace('{cycle}', state.cycle), 'info');
+          saveGame(state);
         }
 
-        // 2. Gas Dynamics
         GasSimulation.update(state, simDt);
-
-        // 3. Power Grid & Life Support
         const powerStats = PowerSimulation.update(state, simDt);
-
-        // 4. Colonists AI & Pathfinding
         state.colonists.forEach(c => ColonistAI.update(c, state, simDt));
-
-        // 5. Dynamic Crisis Manager
         CrisisManager.update(state, simDt);
-
-        // 6. HUD Sync
         hud.updateTopHUD(powerStats);
 
-        // Auto-save timer
         saveAccumulator += dt;
         if (saveAccumulator >= 60) {
           saveAccumulator = 0;
@@ -2446,9 +2689,7 @@
         }
       }
 
-      // Render Frame
       renderer.render();
-
       requestAnimationFrame(gameLoop);
     }
 

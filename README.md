@@ -4,7 +4,14 @@
 
 [![GitHub Pages](https://img.shields.io/badge/Live%20Demo-Play%20Now-00d2ff?style=for-the-badge&logo=github)](https://jeiel85.github.io/frostfall-asteroid-colony/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![i18n: KO / EN](https://img.shields.io/badge/Language-한국어%20%7C%20English-purple.svg)](#)
 [![Vanilla JS](https://img.shields.io/badge/Tech-Vanilla%20JS%20%7C%20HTML5%20Canvas%20%7C%20Web%20Audio-orange.svg)](#)
+
+---
+
+## 🌐 다국어 지원 (Multi-Language: 한국어 / English)
+- **완벽한 한국어 기본 지원**: 모든 UI 텍스트, 자원 툴팁, 시설 명칭, 15종 연구 테크트리, 개척민 성격 및 특기, 돌발 위기 이벤트, 생존 매뉴얼이 매끄러운 한국어로 기본 제공됩니다.
+- **실시간 언어 원클릭 전환**: 상단 제어 바의 `🌐 한국어 / English` 버튼을 클릭하면 새로고침 없이 즉시 한국어와 영어 간에 전환되며, 언어 설정이 `localStorage`에 자동 저장됩니다.
 
 ---
 
@@ -78,6 +85,7 @@
 | **마우스 좌클릭 드래그** | 타일 굴착 지정 / 시설 배치 / UI 조작 |
 | **마우스 우클릭 / 휠 드래그** | 카메라 자유 이동 (화면 패닝) |
 | **마우스 휠 스크롤** | 카메라 확대 / 축소 (줌 인/아웃) |
+| **🌐 언어 버튼 (상단 HUD)** | 한국어 ⟷ English 즉시 전환 |
 | **Space Bar** | 일시 정지 / 재개 |
 | **1 / 2 / 3 키** | 1배속 / 2배속 / 3배속 재생 |
 | **F1** | 일반 재질 뷰 (Normal View) |

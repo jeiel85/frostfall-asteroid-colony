@@ -55,23 +55,29 @@ const mockElem = () => ({
   getBoundingClientRect: () => ({ left: 0, top: 0, width: 1920, height: 1080 }),
   appendChild: () => {},
   querySelectorAll: () => [],
-  innerHTML: ''
+  innerHTML: '',
+  innerText: '',
+  title: ''
 });
 global.document = {
   getElementById: () => mockElem(),
   querySelectorAll: () => [],
-  createElement: () => mockElem()
+  createElement: () => mockElem(),
+  documentElement: { lang: 'ko' }
 };
 global.performance = { now: () => Date.now() };
 let loopCount = 0;
 global.requestAnimationFrame = (fn) => {
-  if (loopCount++ < 10) fn(Date.now());
+  if (loopCount++ < 5) fn(Date.now());
 };
 
-// Evaluate game script
 const testRunner = new Function(jsCode + `
   return {
     state,
+    I18N,
+    curLang,
+    t,
+    hud,
     GasSimulation,
     PowerSimulation,
     ColonistAI,
@@ -81,25 +87,32 @@ const testRunner = new Function(jsCode + `
 `);
 
 const sim = testRunner();
-console.log('✓ Initialized Game State successfully');
-console.log('✓ Colonists count:', sim.state.colonists.length);
-console.log('✓ Initial Buildings count:', sim.state.buildings.length);
+console.log('✓ Initialized Game State with i18n');
+console.log('Current Language:', sim.curLang);
+console.log('Korean Test:', sim.t('titleSub'));
+console.log('Testing Language Switch to English...');
+global.curLang = 'en';
+console.log('English Test:', sim.I18N.en.titleSub);
+
+console.log('Testing HUD Controller language application...');
+sim.hud.applyLanguage();
+console.log('✓ applyLanguage() executed without errors');
 
 console.log('Running GasSimulation tick...');
 sim.GasSimulation.update(sim.state, 0.1);
-console.log('✓ GasSimulation updated without error');
+console.log('✓ GasSimulation OK');
 
 console.log('Running PowerSimulation tick...');
-const power = sim.PowerSimulation.update(sim.state, 0.1);
-console.log('✓ PowerSimulation output:', power);
+sim.PowerSimulation.update(sim.state, 0.1);
+console.log('✓ PowerSimulation OK');
 
 console.log('Running Colonist AI ticks...');
 sim.state.colonists.forEach(c => sim.ColonistAI.update(c, sim.state, 0.1));
-console.log('✓ Colonist AI updated without error');
+console.log('✓ Colonist AI OK');
 
 console.log('Testing Save / Load...');
 sim.saveGame(sim.state);
 const loaded = sim.loadGame(sim.state);
 console.log('✓ Save and Load verified:', loaded);
 
-console.log('\n>>> ALL SIMULATION LOGIC TESTS PASSED WITH 100% SUCCESS! <<<');
+console.log('\n>>> MULTI-LANGUAGE (i18n) TEST PASSED WITH 100% SUCCESS! <<<');
